@@ -19,9 +19,7 @@ function EditCart(props) {
     axios
       .get("cart?key=3fc45675")
       .then((response) => {
-        // Continue your code...
         addToCart(response.data);
-        //toast.success("Success!");
       })
       .catch(() => toast.error("Failed to fetch cart.."));
   };
@@ -33,7 +31,7 @@ function EditCart(props) {
         addToCart([]);
         toast.success("Checkout Success!");
       })
-      .catch(() => toast.error("Failed to fetch cart.."));
+      .catch(() => toast.error("Failed to Checkout.."));
   };
 
   const deleteProduct = (id) => {

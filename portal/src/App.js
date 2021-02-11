@@ -28,7 +28,6 @@ function App() {
       .catch(() => toast.error("Failed to fetch catalog.."));
   };
 
-  const getProducts = () => {};
   const addProducts = (id) => {
     axios
       .post(`cart/${id}?key=3fc45675`)

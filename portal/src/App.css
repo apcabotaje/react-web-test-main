@@ -1,7 +1,3 @@
 .prod-img {
   width: 200px;
 }
-
-.checkout:disabled,
-.checkout[disabled] {
-}
