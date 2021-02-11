@@ -1,0 +1,15 @@
+GET http://localhost:5000/products/key
+### 
+GET http://localhost:5000/products/catalog/?key=3fc45675
+### 
+GET http://localhost:5000/products/cart/?key=3fc45675
+### 
+DELETE  http://localhost:5000/products/cart/checkout?key=3fc45675
+### 
+PUT http://localhost:5000/products/cart/?key=3fc45675
+Content-Type: application/json
+
+{
+    "id": 1,
+    "quantity": 5
+}
