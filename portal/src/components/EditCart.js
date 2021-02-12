@@ -11,9 +11,9 @@ function EditCart(props) {
   const [total, setTotal] = useState();
   const sum = [];
 
-  useEffect(() => {
-    displayCart();
-  }, []);
+  // useEffect(() => {
+  //   displayCart();
+  // }, []);
 
   const displayCart = () => {
     axios
@@ -69,6 +69,7 @@ function EditCart(props) {
         className="btn btn-outline-info"
         data-toggle="modal"
         data-target="#cartModal"
+        onClick={() => displayCart()}
       >
         View Cart
       </button>
@@ -183,7 +184,7 @@ function EditCart(props) {
                   <button
                     type="button"
                     className={"btn btn-success"}
-                    onClick={() => cartCheckout()}
+                    // onClick={() => cartCheckout()}
                   >
                     Checkout
                   </button>

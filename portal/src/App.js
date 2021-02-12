@@ -12,6 +12,7 @@ import Nav from "./components/Nav";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [carts, setCarts] = useState([]);
 
   useEffect(() => {
     displayCatalog();
@@ -34,9 +35,7 @@ function App() {
       .then((response) => {
         // Continue your code...
         toast.success("Item Added to the Cart!");
-        setTimeout(() => {
-          window.location.reload();
-        }, 800);
+        setCarts(response.data);
       })
       .catch(() => toast.error("Failed to Add Item.."));
   };
@@ -44,7 +43,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="container">
-        <Nav />
+        <Nav carts={carts} />
         <h2 className="table mt-5 text-center">Available Products</h2>
         <table className="table mt-1 text-center">
           <thead>
