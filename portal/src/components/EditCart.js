@@ -5,7 +5,7 @@ import axios from "../helper/axios";
 import ToastMessage from "../helper/toastContainer";
 import { toast } from "react-toastify";
 
-function EditCart(props) {
+function EditCart() {
   const [cartList, addToCart] = useState([]);
   const [qty, setQty] = useState();
   const [total, setTotal] = useState();

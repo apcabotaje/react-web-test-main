@@ -43,7 +43,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="container">
-        <Nav carts={carts} />
+        <Nav />
         <h2 className="table mt-5 text-center">Available Products</h2>
         <table className="table mt-1 text-center">
           <thead>
